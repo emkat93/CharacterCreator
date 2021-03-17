@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings">
+
+    <EditText
+        android:id="@+id/idName"
+        android:layout_width="220dp"
+        android:layout_height="52dp"
+        android:ems="10"
+        android:hint="Type your User Name"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="true"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="265dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="72dp"
+        android:text="Light/Dark Background"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/idName" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="170dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="60dp"
+        android:entries="@array/versions"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/switch1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="357dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="36dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
