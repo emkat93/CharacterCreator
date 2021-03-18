@@ -48,7 +48,7 @@ class Settings : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_item)
             spinner.adapter = adapter
         }
-
+        //put changes to spinner after adapter
         spinner.setSelection(selectedPosition)
 
         //Button that saves out info
