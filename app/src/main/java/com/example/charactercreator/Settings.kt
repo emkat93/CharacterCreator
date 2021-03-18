@@ -38,8 +38,7 @@ class Settings : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         spinner = findViewById<Spinner>(R.id.spinner1)
         spinner.onItemSelectedListener = this
 
-        val selectedPosition = spinner.selectedItemPosition
-        spinner.setSelection(SP2.getInt("spinnerSelection", 0))
+        val selectedPosition = SP2.getInt("spinnerSelection", 0)
 
         ArrayAdapter.createFromResource(
                 this,
@@ -50,6 +49,8 @@ class Settings : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             spinner.adapter = adapter
         }
 
+        spinner.setSelection(selectedPosition)
+
         //Button that saves out info
         val save_btn = findViewById<Button>(R.id.button)
         save_btn.setOnClickListener {
@@ -57,7 +58,7 @@ class Settings : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
             editor.apply {
                 putString("name", name.text.toString())
-                putInt("spinnerSelection", selectedPosition)
+                putInt("spinnerSelection", spinner.selectedItemPosition)
                 apply ()
             }
             val intent2 = Intent(this, MainActivity::class.java)
