@@ -70,88 +70,19 @@
         app:layout_constraintTop_toBottomOf="@+id/idPlaceOfBirth" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="348dp"
+        android:layout_height="361dp"
         android:layout_marginTop="15dp"
         android:ems="10"
-        android:gravity="center_horizontal|center_vertical"
-        android:hint="Line 1"
-        android:inputType="textPersonName"
+        android:gravity="start|top"
+        android:hint="Enter Bio Here"
+        android:inputType="textMultiLine"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline10"
+        app:layout_constraintHorizontal_bias="0.653"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idBio" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName6"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:ems="10"
-        android:gravity="center_horizontal|center_vertical"
-        android:hint="Line 2"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline10"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName7"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:ems="10"
-        android:gravity="center_horizontal|center_vertical"
-        android:hint="Line 3"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline10"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName8"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:ems="10"
-        android:gravity="center_horizontal|center_vertical"
-        android:hint="Line 4"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline10"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName9"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:ems="10"
-        android:gravity="center_horizontal|center_vertical"
-        android:hint="Line 5"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline10"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName10"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:ems="10"
-        android:gravity="center_horizontal|center_vertical"
-        android:hint="Line 6"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline10"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
