@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:context=".ui.basic.BasicFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.stats.StatsFragment"
+    tools:layout_editor_absoluteY="81dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+        <TextView
+            android:id="@+id/idStrength"
+            android:layout_width="150dp"
+            android:layout_height="52dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Strength"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline6"
+            app:layout_constraintTop_toTopOf="@+id/guideline7" />
+
+    <EditText
+        android:id="@+id/idStaminaStat"
+        android:layout_width="160dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Starting Stamina"
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintStart_toEndOf="@+id/idStamina"
+        app:layout_constraintTop_toBottomOf="@+id/idWisdomStat" />
+
+    <EditText
+        android:id="@+id/idWisdomStat"
+        android:layout_width="160dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Starting Wisdom"
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintStart_toEndOf="@+id/idWisdom"
+        app:layout_constraintTop_toBottomOf="@+id/idStrengthStat" />
+
+    <EditText
+        android:id="@+id/idStrengthStat"
+        android:layout_width="160dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="12dp"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Starting Strength"
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.324"
+        app:layout_constraintStart_toEndOf="@+id/idStrength"
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
+
+    <EditText
+        android:id="@+id/idCharismaStat"
+        android:layout_width="160dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Starting Charisma"
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/idCharisma"
+        app:layout_constraintTop_toBottomOf="@+id/idStaminaStat" />
+
+    <EditText
+        android:id="@+id/idStealthStat"
+        android:layout_width="160dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Starting Stealth"
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/idStealth"
+        app:layout_constraintTop_toBottomOf="@+id/idSpeedStat" />
+
+    <EditText
+        android:id="@+id/idSpeedStat"
+        android:layout_width="160dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Starting Speed"
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/idSpeed"
+        app:layout_constraintTop_toBottomOf="@+id/idCharismaStat" />
+
+    <EditText
+        android:id="@+id/idKarmaStat"
+        android:layout_width="160dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Starting Karma"
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/idKarma"
+        app:layout_constraintTop_toBottomOf="@+id/idStealthStat" />
+
+    <EditText
+        android:id="@+id/idHealthStat"
+        android:layout_width="160dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Starting Health"
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/idHealth"
+        app:layout_constraintTop_toBottomOf="@+id/idKarmaStat" />
+
+    <EditText
+        android:id="@+id/idMagicStat"
+        android:layout_width="160dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Starting Magic"
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/idMagic"
+        app:layout_constraintTop_toBottomOf="@+id/idHealthStat" />
+
+    <TextView
+        android:id="@+id/idWisdom"
+        android:layout_width="150dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Wisdom"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/idStrength" />
+
+    <TextView
+        android:id="@+id/idStamina"
+        android:layout_width="150dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Stamina"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/idWisdom" />
+
+    <TextView
+        android:id="@+id/idCharisma"
+        android:layout_width="150dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Charisma"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/idStamina" />
+
+    <TextView
+        android:id="@+id/idSpeed"
+        android:layout_width="150dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Speed"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/idCharisma" />
+
+    <TextView
+        android:id="@+id/idStealth"
+        android:layout_width="150dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Stealth"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/idSpeed" />
+
+    <TextView
+        android:id="@+id/idKarma"
+        android:layout_width="150dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Karma"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/idStealth" />
+
+    <TextView
+        android:id="@+id/idHealth"
+        android:layout_width="150dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Health Points"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/idKarma" />
+
+    <TextView
+        android:id="@+id/idMagic"
+        android:layout_width="150dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Magic Points"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/idHealth" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

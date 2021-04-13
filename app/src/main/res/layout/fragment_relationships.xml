@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:context=".ui.basic.BasicFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.relationships.RelationshipsFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <EditText
+        android:id="@+id/idMother"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="Mother"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/guideline9" />
+
+    <EditText
+        android:id="@+id/idFather"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="Father"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/idMother" />
+
+    <EditText
+        android:id="@+id/idSister"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="Sister"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/idFather" />
+
+    <EditText
+        android:id="@+id/idBrother"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="Brother"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/idSister" />
+
+    <EditText
+        android:id="@+id/idGrandpa"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="Grandpa"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/idBrother" />
+
+    <EditText
+        android:id="@+id/idGrandma"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="Grandma"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/idGrandpa" />
+
+    <EditText
+        android:id="@+id/idAunt"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="Aunt"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/idGrandma" />
+
+    <EditText
+        android:id="@+id/idUncle"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="Uncle"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/idAunt" />
+
+    <EditText
+        android:id="@+id/idCousin"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="Cousin"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/idUncle" />
+
+    <EditText
+        android:id="@+id/idFriend"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="Friend"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/idCousin" />
+
+    <EditText
+        android:id="@+id/idB_GFriend"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="B/G Friend"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/idFriend" />
+
+    <EditText
+        android:id="@+id/idSpouse"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="Spouse"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/idB_GFriend" />
+
+    <EditText
+        android:id="@+id/idRival"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="Rival"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/idSpouse" />
+
+    <Switch
+        android:id="@+id/idRelationshipStatusMom"
+        android:layout_width="174dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:text="Good Terms"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/idMother"
+        app:layout_constraintTop_toTopOf="@+id/guideline9" />
+
+    <Switch
+        android:id="@+id/idRelationshipStatusDad"
+        android:layout_width="174dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="14dp"
+        android:text="Good Terms"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/idFather"
+        app:layout_constraintTop_toBottomOf="@+id/idRelationshipStatusMom" />
+
+    <Switch
+        android:id="@+id/idRelationshipStatusSister"
+        android:layout_width="174dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:text="Good Terms"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/idSister"
+        app:layout_constraintTop_toBottomOf="@+id/idRelationshipStatusDad" />
+
+    <Switch
+        android:id="@+id/idRelationshipStatusBrother"
+        android:layout_width="174dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:text="Good Terms"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/idBrother"
+        app:layout_constraintTop_toBottomOf="@+id/idRelationshipStatusSister" />
+
+    <Switch
+        android:id="@+id/idRelationshipStatusGrandpa"
+        android:layout_width="174dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:text="Good Terms"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/idGrandpa"
+        app:layout_constraintTop_toBottomOf="@+id/idRelationshipStatusBrother" />
+
+    <Switch
+        android:id="@+id/idRelationshipStatusGrandma"
+        android:layout_width="174dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:text="Good Terms"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/idGrandma"
+        app:layout_constraintTop_toBottomOf="@+id/idRelationshipStatusGrandpa" />
+
+    <Switch
+        android:id="@+id/idRelationshipStatusAunt"
+        android:layout_width="174dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:text="Good Terms"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/idAunt"
+        app:layout_constraintTop_toBottomOf="@+id/idRelationshipStatusGrandma" />
+
+    <Switch
+        android:id="@+id/idRelationshipStatusUncle"
+        android:layout_width="174dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:text="Good Terms"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/idUncle"
+        app:layout_constraintTop_toBottomOf="@+id/idRelationshipStatusAunt" />
+
+    <Switch
+        android:id="@+id/idRelationshipStatusCousin"
+        android:layout_width="174dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:text="Good Terms"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/idCousin"
+        app:layout_constraintTop_toBottomOf="@+id/idRelationshipStatusUncle" />
+
+    <Switch
+        android:id="@+id/idRelationshipStatusFriend"
+        android:layout_width="174dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:text="Good Terms"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/idFriend"
+        app:layout_constraintTop_toBottomOf="@+id/idRelationshipStatusCousin" />
+
+    <Switch
+        android:id="@+id/idRelationshipStatusB_GFriend"
+        android:layout_width="174dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="12dp"
+        android:text="Good Terms"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toEndOf="@+id/idB_GFriend"
+        app:layout_constraintTop_toBottomOf="@+id/idRelationshipStatusFriend" />
+
+    <Switch
+        android:id="@+id/idRelationshipStatusSpouse"
+        android:layout_width="174dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:text="Good Terms"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/idSpouse"
+        app:layout_constraintTop_toBottomOf="@+id/idRelationshipStatusB_GFriend" />
+
+    <Switch
+        android:id="@+id/idRelationshipStatusRival"
+        android:layout_width="174dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:text="Good Terms"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/idRival"
+        app:layout_constraintTop_toBottomOf="@+id/idRelationshipStatusSpouse" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
