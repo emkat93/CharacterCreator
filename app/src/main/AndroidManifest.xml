@@ -11,6 +11,7 @@
         android:theme="@style/Theme.CharacterCreator">
         <activity android:name=".Settings"></activity>
         <activity
+            android:windowSoftInputMode="adjustNothing"
             android:name=".CharacterStats"
             android:label="@string/title_activity_character_stats" />
         <activity android:name=".MainActivity">

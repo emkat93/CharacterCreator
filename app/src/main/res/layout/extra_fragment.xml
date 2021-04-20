@@ -70,7 +70,7 @@
         app:layout_constraintTop_toBottomOf="@+id/idPlaceOfBirth" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/idMultiLine"
         android:layout_width="348dp"
         android:layout_height="361dp"
         android:layout_marginTop="15dp"

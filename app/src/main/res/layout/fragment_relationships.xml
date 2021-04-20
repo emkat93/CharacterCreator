@@ -37,6 +37,7 @@
         android:gravity="center_vertical"
         android:hint="Mother"
         android:inputType="textPersonName"
+        android:selectAllOnFocus="true"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="@+id/guideline9" />
@@ -63,6 +64,7 @@
         android:gravity="center_vertical"
         android:hint="Sister"
         android:inputType="textPersonName"
+        android:selectAllOnFocus="true"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/idFather" />
@@ -76,6 +78,7 @@
         android:gravity="center_vertical"
         android:hint="Brother"
         android:inputType="textPersonName"
+        android:selectAllOnFocus="true"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/idSister" />
@@ -102,6 +105,7 @@
         android:gravity="center_vertical"
         android:hint="Grandma"
         android:inputType="textPersonName"
+        android:selectAllOnFocus="true"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/idGrandpa" />
@@ -128,6 +132,7 @@
         android:gravity="center_vertical"
         android:hint="Uncle"
         android:inputType="textPersonName"
+        android:selectAllOnFocus="true"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/idAunt" />
@@ -141,6 +146,7 @@
         android:gravity="center_vertical"
         android:hint="Cousin"
         android:inputType="textPersonName"
+        android:selectAllOnFocus="true"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/idUncle" />
@@ -180,6 +186,7 @@
         android:gravity="center_vertical"
         android:hint="Spouse"
         android:inputType="textPersonName"
+        android:selectAllOnFocus="true"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/idB_GFriend" />
@@ -193,6 +200,7 @@
         android:gravity="center_vertical"
         android:hint="Rival"
         android:inputType="textPersonName"
+        android:selectAllOnFocus="true"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/idSpouse" />
