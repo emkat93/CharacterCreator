@@ -8,13 +8,14 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.charactercreator.Current_Name
 import com.example.charactercreator.R
 
 class StatsFragment : Fragment() {
 
     private lateinit var statsViewModel: StatsViewModel
 
-    val Pref_Name = "Stats"
+
     lateinit var strength: EditText
     lateinit var wisdom: EditText
     lateinit var stamina: EditText
@@ -34,7 +35,7 @@ class StatsFragment : Fragment() {
             ViewModelProvider(this).get(StatsViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_stats, container, false)
 
-        val SP6 = this.activity?.getSharedPreferences(Pref_Name, AppCompatActivity.MODE_PRIVATE)
+        val SP6 = this.activity?.getSharedPreferences(Current_Name, AppCompatActivity.MODE_PRIVATE)
 
         strength = root.findViewById<EditText>(R.id.idStrengthStat)
         SP6?.getString("strength", "")?.let { strength.setText(it) }
@@ -69,7 +70,7 @@ class StatsFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
 
-        val editor = this.activity?.getSharedPreferences(Pref_Name, AppCompatActivity.MODE_PRIVATE)?.edit()
+        val editor = this.activity?.getSharedPreferences(Current_Name, AppCompatActivity.MODE_PRIVATE)?.edit()
 
         editor?.apply{
             putString("strength", strength.text.toString())

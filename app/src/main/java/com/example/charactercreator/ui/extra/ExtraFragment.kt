@@ -8,13 +8,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import com.example.charactercreator.Current_Name
 import com.example.charactercreator.R
 
 class ExtraFragment : Fragment() {
 
     private lateinit var extraViewModel: ExtraViewModel
 
-    val Pref_Name = "Extra"
+
     lateinit var birthDate: EditText
     lateinit var placeOfBirth: EditText
     lateinit var charInfo: EditText
@@ -27,7 +28,7 @@ class ExtraFragment : Fragment() {
         extraViewModel = ViewModelProvider(this).get(ExtraViewModel::class.java)
         val root = inflater.inflate(R.layout.extra_fragment, container, false)
 
-        val SP4 = this.activity?.getSharedPreferences(Pref_Name, AppCompatActivity.MODE_PRIVATE)
+        val SP4 = this.activity?.getSharedPreferences(Current_Name, AppCompatActivity.MODE_PRIVATE)
 
         birthDate = root.findViewById<EditText>(R.id.idDate)
         SP4?.getString("date", "")?.let { birthDate.setText(it) }
@@ -44,7 +45,7 @@ class ExtraFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
 
-        val editor = this.activity?.getSharedPreferences(Pref_Name, AppCompatActivity.MODE_PRIVATE)?.edit()
+        val editor = this.activity?.getSharedPreferences(Current_Name, AppCompatActivity.MODE_PRIVATE)?.edit()
 
         editor?.apply{
             putString("date", birthDate.text.toString())

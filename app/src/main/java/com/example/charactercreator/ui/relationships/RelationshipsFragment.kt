@@ -9,13 +9,14 @@ import android.widget.Switch
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.charactercreator.Current_Name
 import com.example.charactercreator.R
 
 class RelationshipsFragment : Fragment() {
 
     private lateinit var relationshipsViewModel: RelationshipsViewModel
 
-    val Pref_Name = "Relationships"
+
     lateinit var mother: EditText
     lateinit var father: EditText
     lateinit var sister: EditText
@@ -53,7 +54,7 @@ class RelationshipsFragment : Fragment() {
             ViewModelProvider(this).get(RelationshipsViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_relationships, container, false)
 
-        val SP5 = this.activity?.getSharedPreferences(Pref_Name, AppCompatActivity.MODE_PRIVATE)
+        val SP5 = this.activity?.getSharedPreferences(Current_Name, AppCompatActivity.MODE_PRIVATE)
 
         mother = root.findViewById<EditText>(R.id.idMother)
         mother.setText(SP5?.getString("mother", ""))
@@ -153,7 +154,7 @@ class RelationshipsFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
 
-        val editor = this.activity?.getSharedPreferences(Pref_Name, AppCompatActivity.MODE_PRIVATE)?.edit()
+        val editor = this.activity?.getSharedPreferences(Current_Name, AppCompatActivity.MODE_PRIVATE)?.edit()
 
         editor?.apply{
             putString("mother", mother.text.toString())

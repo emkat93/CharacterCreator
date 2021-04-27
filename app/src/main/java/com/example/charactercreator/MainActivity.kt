@@ -6,17 +6,27 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.ArrayAdapter
+import android.widget.ListAdapter
 import android.widget.ListView
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.charactercreator.adapter.MyAdapter
+import com.example.charactercreator.model.MyModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 public var useDarkTheme = false
+public var Current_Name = ""
 
 class MainActivity : AppCompatActivity() {
 
-    var listItems = ArrayList<String>()
+    lateinit var recyclerView: RecyclerView
+    lateinit var arrayList: ArrayList<String>
+    lateinit var thisAdapter: MyAdapter
+
+    var listItems: ArrayList<String> = ArrayList()
     var adapter: ArrayAdapter<String>? = null
-    lateinit var listView: ListView
+//    lateinit var listView: ListView
     lateinit var undoOnClickListener: View.OnClickListener
 
     lateinit var fmenu: FloatingActionButton
@@ -44,16 +54,29 @@ class MainActivity : AppCompatActivity() {
 
         initMenu()
 
-        listView = findViewById(R.id.lv1)
+        recyclerView = findViewById(R.id.rv1)
 
-        adapter = ArrayAdapter(
-                this,
-                android.R.layout.simple_list_item_1,
-                listItems
-        )
-        listView.adapter = adapter
+        recyclerView.layoutManager = LinearLayoutManager(this)
+
+//        adapter = ListAdapter(listItems, this)
+//
+//        recyclerView.adapter = adapter
 
         undoOnClickListener = View.OnClickListener {  }
+
+        recyclerView.setHasFixedSize(true)
+
+        arrayList = setupData()
+        thisAdapter = MyAdapter(applicationContext, arrayList)
+        recyclerView.adapter = thisAdapter
+    }
+
+    private fun setupData(): ArrayList<String> {
+        var items: ArrayList<String> = ArrayList()
+
+        items.add("Amy")
+
+        return items
     }
 
     private fun initMenu() {

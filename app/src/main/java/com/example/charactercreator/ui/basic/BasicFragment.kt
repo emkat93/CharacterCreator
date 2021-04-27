@@ -8,13 +8,14 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.charactercreator.Current_Name
 import com.example.charactercreator.R
 
 class BasicFragment : Fragment() {
 
     private lateinit var basicViewModel: BasicViewModel
 
-    val Pref_Name = "Bio"
+
     lateinit var charName: EditText
     lateinit var raceSpeciesEthnicity: EditText
     lateinit var charClass: EditText
@@ -35,7 +36,7 @@ class BasicFragment : Fragment() {
                 ViewModelProvider(this).get(BasicViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_basic, container, false)
 
-        val SP3 = this.activity?.getSharedPreferences(Pref_Name, AppCompatActivity.MODE_PRIVATE)
+        val SP3 = this.activity?.getSharedPreferences(Current_Name, AppCompatActivity.MODE_PRIVATE)
 
         charName = root.findViewById<EditText>(R.id.idCharacterName)
         charName.setText(SP3?.getString("name", ""))
@@ -72,7 +73,7 @@ class BasicFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        val editor = this.activity?.getSharedPreferences(Pref_Name, AppCompatActivity.MODE_PRIVATE)?.edit()
+        val editor = this.activity?.getSharedPreferences(Current_Name, AppCompatActivity.MODE_PRIVATE)?.edit()
 
         editor?.apply {
             putString("name", charName.text.toString())
