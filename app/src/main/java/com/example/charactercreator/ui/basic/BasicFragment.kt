@@ -1,5 +1,6 @@
 package com.example.charactercreator.ui.basic
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,15 +9,18 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.charactercreator.CharacterStats
 import com.example.charactercreator.Current_Name
+import com.example.charactercreator.MainActivity
 import com.example.charactercreator.R
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class BasicFragment : Fragment() {
 
     private lateinit var basicViewModel: BasicViewModel
 
 
-    lateinit var charName: EditText
+    lateinit var charNickName: EditText
     lateinit var raceSpeciesEthnicity: EditText
     lateinit var charClass: EditText
     lateinit var charAlignment: EditText
@@ -27,19 +31,23 @@ class BasicFragment : Fragment() {
     lateinit var skinColor: EditText
     lateinit var markings: EditText
 
+    lateinit var done_btn: FloatingActionButton
+    var translationYaxis = 100f
+
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
+
         basicViewModel =
                 ViewModelProvider(this).get(BasicViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_basic, container, false)
 
         val SP3 = this.activity?.getSharedPreferences(Current_Name, AppCompatActivity.MODE_PRIVATE)
 
-        charName = root.findViewById<EditText>(R.id.idCharacterName)
-        charName.setText(SP3?.getString("name", ""))
+        charNickName = root.findViewById<EditText>(R.id.idCharacterNickName)
+        charNickName.setText(SP3?.getString("name", ""))
 
         raceSpeciesEthnicity = root.findViewById<EditText>(R.id.idRSE)
         raceSpeciesEthnicity.setText(SP3?.getString("race/species/ethnicity", ""))
@@ -68,6 +76,19 @@ class BasicFragment : Fragment() {
         markings = root.findViewById<EditText>(R.id.idMarkings)
         markings.setText(SP3?.getString("markings", ""))
 
+        done_btn = requireView().findViewById(R.id.FABdone)
+
+//        done_btn.apply {
+//            translationY = translationYaxis
+//            alpha = 0f
+//        }
+
+        done_btn.setOnClickListener {
+            //call function
+            var intent = Intent(context, MainActivity::class.java)
+            startActivity(intent)
+        }
+
         return root
     }
 
@@ -76,7 +97,7 @@ class BasicFragment : Fragment() {
         val editor = this.activity?.getSharedPreferences(Current_Name, AppCompatActivity.MODE_PRIVATE)?.edit()
 
         editor?.apply {
-            putString("name", charName.text.toString())
+            putString("name", charNickName.text.toString())
             putString("race/species/ethnicity", raceSpeciesEthnicity.text.toString())
             putString("class", charClass.text.toString())
             putString("alignment", charAlignment.text.toString())

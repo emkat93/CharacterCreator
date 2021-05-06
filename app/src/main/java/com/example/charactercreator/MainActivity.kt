@@ -5,12 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.ArrayAdapter
-import android.widget.ListAdapter
-import android.widget.ListView
-import android.widget.Toast
+import android.widget.*
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+
 import com.example.charactercreator.adapter.MyAdapter
 import com.example.charactercreator.model.MyModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -37,6 +37,8 @@ class MainActivity : AppCompatActivity() {
     var translationYaxis = 100f
     var menuOpen = false
 
+    lateinit var addName: EditText
+
     val Pref_Name = "perfs"
     val Pref_Dark_Theme = "dark_theme"
 
@@ -52,6 +54,10 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
+        val cardview1 = findViewById<ConstraintLayout>(R.id.cardView)
+        cardview1.isVisible = false
+
+
         initMenu()
 
         recyclerView = findViewById(R.id.rv1)
@@ -64,7 +70,7 @@ class MainActivity : AppCompatActivity() {
 
         undoOnClickListener = View.OnClickListener {  }
 
-        recyclerView.setHasFixedSize(true)
+//        recyclerView.setHasFixedSize(true)
 
         arrayList = setupData()
         thisAdapter = MyAdapter(applicationContext, arrayList)
@@ -75,6 +81,8 @@ class MainActivity : AppCompatActivity() {
         var items: ArrayList<String> = ArrayList()
 
         items.add("Amy")
+        items.add("John")
+//        items.removeAt(1)
 
         return items
     }
@@ -116,6 +124,26 @@ class MainActivity : AppCompatActivity() {
 
         subMenu1.setOnClickListener {
             //call function
+//            val cardview2 = findViewById<ConstraintLayout>(R.id.cardView)
+//            cardview2.isVisible = true
+//            var saveName = findViewById<Button>(R.id.idSaveName)
+//            var cancelSave = findViewById<Button>(R.id.idCancel)
+//
+//            saveName.setOnClickListener {
+//                addName.findViewById<EditText>(R.id.idCharacterName)
+//                var items: ArrayList<String> = ArrayList()
+//                items.add(addName.text.toString())
+//                cardview2.isVisible = false
+//                var intent = Intent(this, CharacterStats::class.java)
+//                closeTheMenu()
+//                startActivity(intent)
+//            }
+//
+//            cancelSave.setOnClickListener {
+//                val cardview2 = findViewById<ConstraintLayout>(R.id.cardView)
+//                cardview2.isVisible = false
+//            }
+
             var intent = Intent(this, CharacterStats::class.java)
             closeTheMenu()
             startActivity(intent)

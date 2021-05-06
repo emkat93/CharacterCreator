@@ -9,11 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CharacterCreator">
-        <activity android:name=".Settings"></activity>
+        <activity android:name=".NamingYourCharacter.NamingYourCharacter"></activity>
+        <activity android:name=".Settings" />
         <activity
-            android:windowSoftInputMode="adjustNothing"
             android:name=".CharacterStats"
-            android:label="@string/title_activity_character_stats" />
+            android:label="@string/title_activity_character_stats"
+            android:windowSoftInputMode="adjustNothing" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

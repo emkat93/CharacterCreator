@@ -30,18 +30,18 @@
             app:layout_constraintGuide_begin="20dp" />
 
         <EditText
-            android:id="@+id/idCharacterName"
+            android:id="@+id/idCharacterNickName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:ellipsize="end"
             android:ems="10"
             android:gravity="center_horizontal|center_vertical"
-            android:hint="Name"
+            android:hint="NickName"
             android:inputType="textPersonName"
             android:selectAllOnFocus="true"
             android:singleLine="true"
-            android:text="Name"
+            android:text="NickName"
             android:textColorHint="#E91E63"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -63,7 +63,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toBottomOf="@+id/idCharacterName" />
+            app:layout_constraintTop_toBottomOf="@+id/idCharacterNickName" />
 
         <EditText
             android:id="@+id/idClass"
@@ -194,13 +194,13 @@
             app:layout_constraintTop_toBottomOf="@+id/idSkinColor" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton"
+            android:id="@+id/FABdone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="36dp"
             android:clickable="true"
-            android:src="@android:drawable/ic_menu_save"
+            android:src="@drawable/done"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/idMarkings" />
 
@@ -209,9 +209,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="96dp"
-            android:text="Name"
+            android:text="Nickname"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/idCharacterName" />
+            app:layout_constraintTop_toBottomOf="@+id/idCharacterNickName" />
 
         <TextView
             android:id="@+id/rseLabel"
