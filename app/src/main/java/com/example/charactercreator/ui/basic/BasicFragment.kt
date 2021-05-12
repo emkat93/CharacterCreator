@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -76,12 +77,8 @@ class BasicFragment : Fragment() {
         markings = root.findViewById<EditText>(R.id.idMarkings)
         markings.setText(SP3?.getString("markings", ""))
 
-        done_btn = requireView().findViewById(R.id.FABdone)
 
-//        done_btn.apply {
-//            translationY = translationYaxis
-//            alpha = 0f
-//        }
+        done_btn = root.findViewById<FloatingActionButton>(R.id.FABdone)
 
         done_btn.setOnClickListener {
             //call function

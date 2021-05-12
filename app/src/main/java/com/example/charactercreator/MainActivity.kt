@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
     var menuOpen = false
 
     lateinit var addName: EditText
+    lateinit var cardview1: ConstraintLayout
 
     val Pref_Name = "perfs"
     val Pref_Dark_Theme = "dark_theme"
@@ -54,7 +55,7 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        val cardview1 = findViewById<ConstraintLayout>(R.id.cardView)
+        cardview1 = findViewById<ConstraintLayout>(R.id.cardView)
         cardview1.isVisible = false
 
 
@@ -124,29 +125,24 @@ class MainActivity : AppCompatActivity() {
 
         subMenu1.setOnClickListener {
             //call function
-//            val cardview2 = findViewById<ConstraintLayout>(R.id.cardView)
-//            cardview2.isVisible = true
-//            var saveName = findViewById<Button>(R.id.idSaveName)
-//            var cancelSave = findViewById<Button>(R.id.idCancel)
-//
-//            saveName.setOnClickListener {
-//                addName.findViewById<EditText>(R.id.idCharacterName)
-//                var items: ArrayList<String> = ArrayList()
-//                items.add(addName.text.toString())
-//                cardview2.isVisible = false
-//                var intent = Intent(this, CharacterStats::class.java)
-//                closeTheMenu()
-//                startActivity(intent)
-//            }
-//
-//            cancelSave.setOnClickListener {
-//                val cardview2 = findViewById<ConstraintLayout>(R.id.cardView)
-//                cardview2.isVisible = false
-//            }
+            cardview1.isVisible = true
+            var saveName = findViewById<Button>(R.id.idSaveName)
+            var cancelSave = findViewById<Button>(R.id.idCancel)
 
-            var intent = Intent(this, CharacterStats::class.java)
-            closeTheMenu()
-            startActivity(intent)
+            saveName.setOnClickListener {
+                addName = findViewById<EditText>(R.id.idCharacterName)
+//                var items: ArrayList<String> = ArrayList()
+                arrayList.add(addName.text.toString())
+                cardview1.isVisible = false
+                var intent = Intent(this, CharacterStats::class.java)
+                closeTheMenu()
+                startActivity(intent)
+            }
+
+            cancelSave.setOnClickListener {
+                cardview1.isVisible = false
+            }
+
         }
 
         subMenu2.setOnClickListener {
