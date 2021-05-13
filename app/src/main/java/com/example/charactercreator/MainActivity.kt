@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 import com.example.charactercreator.adapter.MyAdapter
-import com.example.charactercreator.model.MyModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 public var useDarkTheme = false
@@ -26,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
     var listItems: ArrayList<String> = ArrayList()
     var adapter: ArrayAdapter<String>? = null
-//    lateinit var listView: ListView
+
     lateinit var undoOnClickListener: View.OnClickListener
 
     lateinit var fmenu: FloatingActionButton
@@ -65,13 +64,7 @@ class MainActivity : AppCompatActivity() {
 
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-//        adapter = ListAdapter(listItems, this)
-//
-//        recyclerView.adapter = adapter
-
         undoOnClickListener = View.OnClickListener {  }
-
-//        recyclerView.setHasFixedSize(true)
 
         arrayList = setupData()
         thisAdapter = MyAdapter(applicationContext, arrayList)
@@ -80,6 +73,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupData(): ArrayList<String> {
         var items: ArrayList<String> = ArrayList()
+
+//        val sharedPreferences = getSharedPreferences("perfs", MODE_PRIVATE)
+//        val savedString = sharedPreferences.getString(addName.text.toString(), null)
 
         items.add("Amy")
         items.add("John")
@@ -130,10 +126,16 @@ class MainActivity : AppCompatActivity() {
             var cancelSave = findViewById<Button>(R.id.idCancel)
 
             saveName.setOnClickListener {
+//                val editor = getSharedPreferences(Pref_Name, MODE_PRIVATE).edit()
+
                 addName = findViewById<EditText>(R.id.idCharacterName)
 //                var items: ArrayList<String> = ArrayList()
-                arrayList.add(addName.text.toString())
                 cardview1.isVisible = false
+
+//                editor.apply{
+//                    arrayList.add(addName.text.toString())
+//                    apply()
+//                }
                 var intent = Intent(this, CharacterStats::class.java)
                 closeTheMenu()
                 startActivity(intent)

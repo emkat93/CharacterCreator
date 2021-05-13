@@ -18,26 +18,12 @@ import kotlinx.android.synthetic.main.list_item.view.*
 class MyAdapter (var context: Context, var arrayList: ArrayList<String>):
         RecyclerView.Adapter<ViewHolder>() {
 
-//            class ItemHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-//                var txt = itemView.findViewById<TextView>(R.id.idCharacter)
-//            }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-//        val itemholder = LayoutInflater.from(parent.context)
-//                .inflate(R.layout.activity_main, parent, false)
-//        return RecyclerView.ViewHolder(itemholder)
 
         return ViewHolder(LayoutInflater.from(context).inflate(R.layout.list_item, parent, false))
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-//        var myCharacterName: MyModel = arrayList.get(position)
-//
-//        holder.txt.text = myCharacterName.textBox
-//
-//        holder.txt.setOnClickListener {
-//            Toast.makeText(context, myCharacterName.textBox, Toast.LENGTH_LONG).show()
-//        }
 
         holder?.itemType?.text = arrayList[position]
         holder.itemType.setOnClickListener {
